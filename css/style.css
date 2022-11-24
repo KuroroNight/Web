@@ -480,6 +480,7 @@ a:focus {
     position: relative;
     font-size: 40px;
     font-weight: 700;
+    margin-bottom: 16px;
 }
 
 @media (max-width: 767.98px) {
@@ -1418,9 +1419,11 @@ a:focus {
 
 .contact .contact-form input {
     height: 45px;
-    padding: 15px;
-    background: none;
     border-radius: 0;
+}
+
+.contact .contact-form input :not(disabled) {
+    background: none;
 }
 
 .contact .contact-form textarea {
@@ -1452,7 +1455,13 @@ a:focus {
     list-style-type: none;
 }
 
-
+.btnCamera{
+    cursor: pointer;
+    border: black 1px solid;
+    padding: 2px 8px;
+    color: white !important;
+    background: #333246;
+}
 
 /*******************************/
 /******* Single Post CSS *******/
@@ -1884,6 +1893,13 @@ a:focus {
     transform: scale(1.1);
 }
 
+.verticalFlex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+}
 
 
 /*******************************/
