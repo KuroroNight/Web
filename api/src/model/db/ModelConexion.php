@@ -6,11 +6,11 @@ class Conexion{
     private $user;
     private $pw;
     private $nombreBD;
-
+    //localhost
     public function __construct(){
-        $this->host="localhost";
-        $this->user="root";
-        $this->pw="";
+        $this->host="database2.cvdx3yuticeu.us-east-2.rds.amazonaws.com";
+        $this->user="Kuroro";
+        $this->pw="12345678";
         $this->nombreBD="votacion";
     }
 
