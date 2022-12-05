@@ -9,6 +9,7 @@
         <script type="text/javascript" src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.9/dist/sweetalert2.all.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="lib/face-api.js"></script>
 
         <!-- Favicon -->
         <link href="img/favicon.ico" rel="icon">
@@ -105,7 +106,6 @@
         <div class="contact">
             <div class="container">
                 <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>Contactos</p>
                     <h2>Formato de Registro</h2>
                     <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="contact-form">
@@ -114,24 +114,26 @@
                                 <div class="verticalFlex">
                                     <video id="video" width="320" height="240" class="d-none" autoplay></video>
                                     <canvas id="canvas" width="320" height="240" class="d-none"></canvas>
+                                    <p id="waitMessage" class="d-none">Por favor, espere...</p>
+
                                     <a id="start-camera" class="btnCamera">Tomar fotografía</a>
                                     <a id="click-photo" class="btnCamera d-none">Capturar imagen</a>
                                     <a id="try_again" class="btnCamera d-none">Tomar otra fotografía</a>
                                 </div>
                                 <div class="control-group">
-                                    <input type="text" class="form-control" id="name" placeholder="Nombre Completo del votante" required="required" data-validation-required-message="Please enter your name" />
+                                    <input type="text" class="form-control" id="name" placeholder="Nombre Completo del votante" required="required" data-validation-required-message="Ingrese su nombre" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="control-group">
-                                    <input type="text" class="form-control" id="curp" placeholder="CURP" required="required" data-validation-required-message="Please enter a subject" />
+                                    <input type="text" class="form-control" id="curp" placeholder="CURP" required="required" data-validation-required-message="Ingrese su CURP" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="control-group">
-                                    <input type="password" class="form-control" id="contrasena" placeholder="Contraseña" required="required" data-validation-required-message="Please enter a subject" />
+                                    <input type="password" class="form-control" id="contrasena" placeholder="Contraseña" required="required" data-validation-required-message="Ingrese su contraseña" />
                                     <p class="help-block text-danger"></p>
                                 </div>
 						        <div class="control-group">
-                                    <input type="password" class="form-control" id="contrasenaVerify" placeholder="Confirma contraseña" required="required" data-validation-required-message="Please enter a subject" />
+                                    <input type="password" class="form-control" id="contrasenaVerify" placeholder="Confirma contraseña" required="required" data-validation-required-message="Confirme su contraseña" />
                                     <p class="help-block text-danger"></p>
                                 </div>
 
@@ -198,6 +200,7 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+        <script src="js/signup.js"></script>
         <script src="URL.js"></script>
     </body>
 </html>

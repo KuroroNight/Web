@@ -6,6 +6,10 @@
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="Free Website Template" name="keywords">
         <meta content="Free Website Template" name="description">
+        <script type="text/javascript" src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.9/dist/sweetalert2.all.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="lib/face-api.js"></script>
 
         <!-- Favicon -->
         <link href="img/favicon.ico" rel="icon">
@@ -104,31 +108,33 @@
             <div class="container">
                 <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
                     <p>Identificate</p>
-                    <h2>Inicia tu sesión como votante</h2>
+                    <h2 class="PageTitle">Inicia tu sesión como votante</h2>
                     <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="contact-form">
                             <div id="success"></div>
-                            <form name="sentMessage" id="contactForm" novalidate="novalidate" href="index.html">
+                            <form name="sentMessage" id="contactForm" novalidate="novalidate">
                                 <div class="control-group">
-                                    <input type="text" class="form-control" id="curp" placeholder="Escribe tu CURP" required="required" data-validation-required-message="Por favor ingrese su CURP" />
+                                    <input type="text" class="form-control" id="curpLoginInput" placeholder="Escribe tu CURP" required="required" data-validation-required-message="Por favor ingrese su CURP" />
                                     <p class="help-block text-danger"></p>
                                 </div>
-                                <div class="control-group">
-                                    <input type="password" class="form-control" id="contrasena" placeholder="Contraseña" required="required" data-validation-required-message="Por favor ingrese su contraseñe" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-						<div class="control-group">
-                                    <input type="password" class="form-control" id="contra" placeholder="Confirma contraseña" required="required" data-validation-required-message="Por favor confirme su contraseña" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-					  <div class="control-group">
-                                    <input type="file" class="form-control" id="foto" placeholder="Tu foto" required="required" data-validation-required-message="Please enter your email" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
+                                
                                 <div>
-                                    <button class="btn" type="submit" id="sendMessageButton" hred>Iniciar sesión</button></br>
+                                    <button class="btn" id="validarCurp">Validar CURP</button>
                                 </div>
                             </form>
+
+                            <div id="permisoContainer" class="d-none">
+                                <div class="aviso">Necesitamos validar tu identidad mediante reconocimiento facial, por favor haga clic en el siguiente botón y acepte el permiso para usar su cámara</div>
+                                <button class="btn" id="btnReconocimiento">Activar cámara e iniciar reconocimiento facial</button>
+                            </div>
+
+                            <div id="reconocimientoContainer" class="d-none">
+                                <div class="aviso">Por favor colóquese frente a la cámara</div>
+                                <div id="videoContainer" class="videoContainer">
+                                    <video class="loginVideo" id="video" width="360" height="270" autoplay muted class="d-none"></video>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -187,6 +193,8 @@
         <script src="mail/contact.js"></script>
 
         <!-- Template Javascript -->
+        <script src="js/login.js"></script>
         <script src="js/main.js"></script>
+        <script src="URL.js"></script>
     </body>
 </html>
