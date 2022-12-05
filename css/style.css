@@ -1901,6 +1901,38 @@ a:focus {
     margin-bottom: 32px;
 }
 
+.PageTitle{
+    margin-bottom: 2rem !important;
+}
+
+.aviso{
+    color: #797979;
+    font-size: 16px;
+    margin-bottom: 1rem;
+}
+
+.reconocimientoContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#videoContainer canvas{
+    position: absolute;
+    top: 55px;
+}
+
+.loginVideo{
+    position: absolute;
+    top: 55px;
+}
+
+.videoContainer{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 /*******************************/
 /********* Footer CSS **********/
