@@ -1,13 +1,13 @@
 <?php
 
 define("DOCUMENTROOT", $_SERVER['DOCUMENT_ROOT']);
-define("CLOUD", "http://localhost/Votaciones/");
+define("CLOUD", "https://main.d2cxwpfi1fugzo.amplifyapp.com/");
 define("MAXIMO_HABITACIONES", 10);
 //
 //http://localhost/Votaciones/
 class Config
 {
-    const SERVER        = "http://localhost/Votaciones/";
+    const SERVER        = "https://main.d2cxwpfi1fugzo.amplifyapp.com/";
     const HOTELDILIGENCIAS          = self::SERVER . "Votaciones/";
     const PATH_HOTELDILIGENCIAS     = "Votaciones/";
     const RUTA_HOTELDILIGENCIAS   = DOCUMENTROOT . "/" . self::PATH_HOTELDILIGENCIAS;
